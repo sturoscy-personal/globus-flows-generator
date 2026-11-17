@@ -97,6 +97,7 @@ The flow runs every step as the person who starts it. It is private to you by de
 
 - **In the index:** the entry count should be the number of draws plus the summary entries (2,023 draws plus summaries for the full file).
 - **Dashboard (browser):** open `dashboard/powerball-dashboard.html`. If your browser blocks the requests from a local file, serve the folder with `python3 -m http.server 8000` and open it from localhost.
+  - **The dashboard points at the author's test index.** To see your own data, change `IDX` (near the top of the script in `dashboard/powerball-dashboard.html`) to your Search index ID. Otherwise it shows the author's public test data, not your run's.
 - **Dashboard (Cowork):** the same charts also exist as a Cowork artifact named `powerball-dashboard`, which reads the index through the connected Search tool.
 
 Both dashboards use anonymous Search queries, so they see only entries with `visible_to: public`.

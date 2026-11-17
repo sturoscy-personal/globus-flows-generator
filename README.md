@@ -125,3 +125,7 @@ Both dashboards use anonymous Search queries, so they see only entries with `vis
 - [Globus Search documentation](https://docs.globus.org/api/search/)
 - [Globus Compute documentation](https://globus-compute.readthedocs.io/)
 - [Globus SDK for JavaScript](https://github.com/globus/globus-sdk-javascript) (used by the browser dashboard)
+
+## License
+
+[MIT](LICENSE) © 2026 The University of Chicago

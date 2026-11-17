@@ -1,0 +1,971 @@
+[
+  {
+    ":id": "row-crp3.vrqb.ctbb",
+    ":version": "rv-cics-hzqv.tfgx",
+    ":created_at": "2026-11-10T08:38:33.738Z",
+    ":updated_at": "2026-11-10T08:38:33.738Z",
+    "draw_date": "2026-11-09T00:00:00.000",
+    "winning_numbers": "13 34 41 45 48 25",
+    "multiplier": "2",
+    "double_play_winning_numbers": "07 12 47 56 68 11"
+  },
+  {
+    ":id": "row-ctbf~kgex-krtv",
+    ":version": "rv-5bry_c8yx-uzi2",
+    ":created_at": "2026-11-08T08:38:55.180Z",
+    ":updated_at": "2026-11-08T08:38:55.180Z",
+    "draw_date": "2026-11-07T00:00:00.000",
+    "winning_numbers": "03 36 37 56 61 21",
+    "multiplier": "2",
+    "double_play_winning_numbers": "11 17 26 37 45 07"
+  },
+  {
+    ":id": "row-mqyh.r4i7-ywtw",
+    ":version": "rv-2pux.hfgt_2fzd",
+    ":created_at": "2026-11-05T08:39:25.513Z",
+    ":updated_at": "2026-11-05T08:39:25.513Z",
+    "draw_date": "2026-11-04T00:00:00.000",
+    "winning_numbers": "15 34 41 53 56 21",
+    "multiplier": "2",
+    "double_play_winning_numbers": "03 06 23 58 65 15"
+  },
+  {
+    ":id": "row-gxek_bz54_xncy",
+    ":version": "rv-rpe9_8wmn.uuwa",
+    ":created_at": "2026-11-03T08:38:55.054Z",
+    ":updated_at": "2026-11-03T08:38:55.054Z",
+    "draw_date": "2026-11-02T00:00:00.000",
+    "winning_numbers": "07 23 29 64 66 23",
+    "multiplier": "4",
+    "double_play_winning_numbers": "20 23 24 33 61 01"
+  },
+  {
+    ":id": "row-qsg6.ixv4-kysc",
+    ":version": "rv-yt3t~3sm6_5fma",
+    ":created_at": "2026-11-01T08:39:50.963Z",
+    ":updated_at": "2026-11-01T08:39:50.963Z",
+    "draw_date": "2026-10-31T00:00:00.000",
+    "winning_numbers": "02 04 18 50 56 20",
+    "multiplier": "3",
+    "double_play_winning_numbers": "16 52 55 58 67 24"
+  },
+  {
+    ":id": "row-ue69-icsf~quv4",
+    ":version": "rv-egee~idmn~pjfr",
+    ":created_at": "2026-10-29T07:38:55.603Z",
+    ":updated_at": "2026-10-29T07:38:55.603Z",
+    "draw_date": "2026-10-28T00:00:00.000",
+    "winning_numbers": "11 13 16 47 60 13",
+    "multiplier": "2",
+    "double_play_winning_numbers": "15 22 23 48 65 09"
+  },
+  {
+    ":id": "row-bptm.u6pq.cgu8",
+    ":version": "rv-cg8e_96gw_dqdn",
+    ":created_at": "2026-10-27T07:38:49.047Z",
+    ":updated_at": "2026-10-27T07:38:49.047Z",
+    "draw_date": "2026-10-26T00:00:00.000",
+    "winning_numbers": "18 26 49 50 54 01",
+    "multiplier": "3",
+    "double_play_winning_numbers": "05 11 14 24 59 08"
+  },
+  {
+    ":id": "row-scbi-n7e9-cxah",
+    ":version": "rv-zmea_ukc6_aqk8",
+    ":created_at": "2026-10-25T07:40:00.000Z",
+    ":updated_at": "2026-10-25T07:40:00.000Z",
+    "draw_date": "2026-10-24T00:00:00.000",
+    "winning_numbers": "04 05 15 19 55 19",
+    "multiplier": "2",
+    "double_play_winning_numbers": "03 30 44 50 56 23"
+  },
+  {
+    ":id": "row-aj49~tbb5-6wf4",
+    ":version": "rv-5de7.dwqu_ub3q",
+    ":created_at": "2026-10-22T07:38:55.953Z",
+    ":updated_at": "2026-10-22T07:38:55.953Z",
+    "draw_date": "2026-10-21T00:00:00.000",
+    "winning_numbers": "01 21 44 50 57 05",
+    "multiplier": "2",
+    "double_play_winning_numbers": "07 23 31 45 59 08"
+  },
+  {
+    ":id": "row-bkqs-ru2r~jhc8",
+    ":version": "rv-wfbp~nhar.7sp7",
+    ":created_at": "2026-10-20T07:42:31.334Z",
+    ":updated_at": "2026-10-20T07:42:31.334Z",
+    "draw_date": "2026-10-19T00:00:00.000",
+    "winning_numbers": "08 31 32 42 48 23",
+    "multiplier": "4",
+    "double_play_winning_numbers": "11 23 24 47 49 11"
+  },
+  {
+    ":id": "row-xxsm.p6th~uxcy",
+    ":version": "rv-8mv8-3tue-ab8y",
+    ":created_at": "2026-10-18T07:38:50.853Z",
+    ":updated_at": "2026-10-18T07:38:50.853Z",
+    "draw_date": "2026-10-17T00:00:00.000",
+    "winning_numbers": "12 13 24 32 35 11",
+    "multiplier": "3",
+    "double_play_winning_numbers": "13 14 30 52 60 15"
+  },
+  {
+    ":id": "row-t9wf-3pkf-vdc2",
+    ":version": "rv-ryis-78jc_uy7f",
+    ":created_at": "2026-10-15T07:38:52.294Z",
+    ":updated_at": "2026-10-15T07:38:52.294Z",
+    "draw_date": "2026-10-14T00:00:00.000",
+    "winning_numbers": "03 34 37 42 46 20",
+    "multiplier": "3",
+    "double_play_winning_numbers": "11 17 37 58 69 09"
+  },
+  {
+    ":id": "row-h5wj-th5v.x6u8",
+    ":version": "rv-7a36~7h6h~ubag",
+    ":created_at": "2026-10-13T07:39:40.627Z",
+    ":updated_at": "2026-10-13T07:39:40.627Z",
+    "draw_date": "2026-10-12T00:00:00.000",
+    "winning_numbers": "22 28 38 51 69 09",
+    "multiplier": "3",
+    "double_play_winning_numbers": "23 25 51 53 54 16"
+  },
+  {
+    ":id": "row-sfn7.v86d-q67x",
+    ":version": "rv-s2zc_g3he_u88y",
+    ":created_at": "2026-10-11T07:39:15.263Z",
+    ":updated_at": "2026-10-11T07:39:15.263Z",
+    "draw_date": "2026-10-10T00:00:00.000",
+    "winning_numbers": "01 04 19 33 51 15",
+    "multiplier": "2",
+    "double_play_winning_numbers": "01 29 34 39 62 14"
+  },
+  {
+    ":id": "row-37e8~ppvd~s62m",
+    ":version": "rv-pmqb.3nua.6fgd",
+    ":created_at": "2026-10-08T07:38:53.412Z",
+    ":updated_at": "2026-10-08T07:38:53.412Z",
+    "draw_date": "2026-10-07T00:00:00.000",
+    "winning_numbers": "11 13 14 21 65 19",
+    "multiplier": "2",
+    "double_play_winning_numbers": "17 18 23 66 69 01"
+  },
+  {
+    ":id": "row-bzdn.qmxy~w28t",
+    ":version": "rv-r4gu_nvdz~a347",
+    ":created_at": "2026-10-06T07:39:23.121Z",
+    ":updated_at": "2026-10-06T07:39:23.121Z",
+    "draw_date": "2026-10-05T00:00:00.000",
+    "winning_numbers": "16 23 32 36 54 09",
+    "multiplier": "2",
+    "double_play_winning_numbers": "07 22 29 35 51 20"
+  },
+  {
+    ":id": "row-x5aj.xxzr.vap7",
+    ":version": "rv-b8if_xwnr_q54b",
+    ":created_at": "2026-10-04T07:39:00.237Z",
+    ":updated_at": "2026-10-04T07:39:00.237Z",
+    "draw_date": "2026-10-03T00:00:00.000",
+    "winning_numbers": "04 42 44 55 59 14",
+    "multiplier": "2",
+    "double_play_winning_numbers": "01 07 26 37 52 01"
+  },
+  {
+    ":id": "row-byr5~nscr-wu8p",
+    ":version": "rv-i3aj.2m5f~rg7t",
+    ":created_at": "2026-10-01T07:38:57.534Z",
+    ":updated_at": "2026-10-01T07:38:57.534Z",
+    "draw_date": "2026-09-30T00:00:00.000",
+    "winning_numbers": "04 06 23 33 44 13",
+    "multiplier": "4",
+    "double_play_winning_numbers": "10 16 27 42 57 14"
+  },
+  {
+    ":id": "row-ssee-yyij.9njd",
+    ":version": "rv-24r8~dnvt.dyjz",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-09-28T00:00:00.000",
+    "winning_numbers": "17 21 29 42 49 07",
+    "multiplier": "3",
+    "double_play_winning_numbers": "11 20 26 43 46 18"
+  },
+  {
+    ":id": "row-xppk.wbn7~yr76",
+    ":version": "rv-x8dm_ukf2.eses",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-09-26T00:00:00.000",
+    "winning_numbers": "14 40 52 55 57 24",
+    "multiplier": "3",
+    "double_play_winning_numbers": "09 23 31 59 69 12"
+  },
+  {
+    ":id": "row-q7vw~q5qj~dsjt",
+    ":version": "rv-nfcv~srwz_mqze",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-09-23T00:00:00.000",
+    "winning_numbers": "05 15 26 29 30 14",
+    "multiplier": "5",
+    "double_play_winning_numbers": "10 17 19 21 40 06"
+  },
+  {
+    ":id": "row-pcgv.yeqy_msrw",
+    ":version": "rv-xnpp-feq9-8m33",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-09-21T00:00:00.000",
+    "winning_numbers": "02 07 09 17 58 20",
+    "multiplier": "2",
+    "double_play_winning_numbers": "03 09 16 26 32 02"
+  },
+  {
+    ":id": "row-qnii~zg3h_rh6w",
+    ":version": "rv-mvdc_26uh.jb6t",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-09-19T00:00:00.000",
+    "winning_numbers": "18 30 41 45 68 10",
+    "multiplier": "2",
+    "double_play_winning_numbers": "13 30 33 49 53 07"
+  },
+  {
+    ":id": "row-e2u6_dztp~np6c",
+    ":version": "rv-wav7-y4he.9pnz",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-09-16T00:00:00.000",
+    "winning_numbers": "02 21 24 25 64 07",
+    "multiplier": "2",
+    "double_play_winning_numbers": "16 30 44 64 67 03"
+  },
+  {
+    ":id": "row-zrm9_p5w5~izzj",
+    ":version": "rv-9cwc_9pzv-dd6r",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-09-14T00:00:00.000",
+    "winning_numbers": "19 20 57 61 67 22",
+    "multiplier": "2",
+    "double_play_winning_numbers": "12 23 48 61 67 08"
+  },
+  {
+    ":id": "row-j98x.adi9_9c8j",
+    ":version": "rv-72qd.k72b-i2zk",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-09-12T00:00:00.000",
+    "winning_numbers": "14 16 23 58 69 03",
+    "multiplier": "2",
+    "double_play_winning_numbers": "21 24 32 48 51 12"
+  },
+  {
+    ":id": "row-tiei.6hat.zgyn",
+    ":version": "rv-mwqk-qrdx-un77",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-09-09T00:00:00.000",
+    "winning_numbers": "09 40 42 55 65 23",
+    "multiplier": "2",
+    "double_play_winning_numbers": "32 33 58 62 69 18"
+  },
+  {
+    ":id": "row-7uqp-uadm_b45f",
+    ":version": "rv-9fga~9hf2.hbc3",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-09-07T00:00:00.000",
+    "winning_numbers": "15 19 28 39 56 03",
+    "multiplier": "3",
+    "double_play_winning_numbers": "20 26 49 56 65 05"
+  },
+  {
+    ":id": "row-qgtp.s6m9_phrk",
+    ":version": "rv-yyve_hxcr.crqq",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-09-05T00:00:00.000",
+    "winning_numbers": "15 40 47 53 59 09",
+    "multiplier": "2",
+    "double_play_winning_numbers": "21 24 30 47 60 05"
+  },
+  {
+    ":id": "row-q6dv-59gd~tpkg",
+    ":version": "rv-av52_nkq8_wsgi",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-09-02T00:00:00.000",
+    "winning_numbers": "03 10 29 58 64 14",
+    "multiplier": "2",
+    "double_play_winning_numbers": "05 06 15 26 33 20"
+  },
+  {
+    ":id": "row-6pha-te9b-t2hy",
+    ":version": "rv-73g2-dj9z_jiaz",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-08-31T00:00:00.000",
+    "winning_numbers": "11 17 25 37 49 10",
+    "multiplier": "2",
+    "double_play_winning_numbers": "04 26 28 44 67 20"
+  },
+  {
+    ":id": "row-5qyx-fn3p_uwe7",
+    ":version": "rv-76jp~nbru~4f9w",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-08-29T00:00:00.000",
+    "winning_numbers": "18 56 62 65 67 18",
+    "multiplier": "2",
+    "double_play_winning_numbers": "16 27 57 58 59 07"
+  },
+  {
+    ":id": "row-pmxf~htrw.iqyb",
+    ":version": "rv-cdei_bhwu-njxu",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-08-26T00:00:00.000",
+    "winning_numbers": "12 32 45 50 58 02",
+    "multiplier": "2",
+    "double_play_winning_numbers": "06 11 15 32 58 18"
+  },
+  {
+    ":id": "row-9rsu.25we_utug",
+    ":version": "rv-a8z9.6675.6wr6",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-08-24T00:00:00.000",
+    "winning_numbers": "03 16 33 38 68 02",
+    "multiplier": "2",
+    "double_play_winning_numbers": "05 06 34 38 39 07"
+  },
+  {
+    ":id": "row-gnny.f5by-9fbq",
+    ":version": "rv-sigy_7fe9-t68e",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-08-22T00:00:00.000",
+    "winning_numbers": "13 31 54 57 65 23",
+    "multiplier": "3",
+    "double_play_winning_numbers": "04 18 29 47 53 16"
+  },
+  {
+    ":id": "row-sdxz~8yvm~6hcq",
+    ":version": "rv-65ap.ii6u~nej2",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-08-19T00:00:00.000",
+    "winning_numbers": "10 21 58 61 64 17",
+    "multiplier": "2",
+    "double_play_winning_numbers": "05 18 38 56 67 07"
+  },
+  {
+    ":id": "row-8mi7-wdmn_4qs2",
+    ":version": "rv-59tj_yy7v~ijhv",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-08-17T00:00:00.000",
+    "winning_numbers": "08 15 25 49 65 22",
+    "multiplier": "4",
+    "double_play_winning_numbers": "13 34 39 45 56 02"
+  },
+  {
+    ":id": "row-zmpy-z59x~xg44",
+    ":version": "rv-sb4y~v9j6-nstm",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-08-15T00:00:00.000",
+    "winning_numbers": "05 08 27 29 63 13",
+    "multiplier": "2",
+    "double_play_winning_numbers": "19 21 45 46 65 20"
+  },
+  {
+    ":id": "row-htqz-ubxw-xhcr",
+    ":version": "rv-5qrh.9cbx.6w7n",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-08-12T00:00:00.000",
+    "winning_numbers": "04 26 66 67 69 09",
+    "multiplier": "2",
+    "double_play_winning_numbers": "03 04 19 21 58 08"
+  },
+  {
+    ":id": "row-q2hk.52q3~c3mn",
+    ":version": "rv-vmrk~azpf-3tvd",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-08-10T00:00:00.000",
+    "winning_numbers": "06 37 54 55 64 10",
+    "multiplier": "3",
+    "double_play_winning_numbers": "04 23 31 32 57 23"
+  },
+  {
+    ":id": "row-4bq9.3szi_zxjj",
+    ":version": "rv-xezg-mber~q3zi",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-08-08T00:00:00.000",
+    "winning_numbers": "05 09 35 54 63 07",
+    "multiplier": "3",
+    "double_play_winning_numbers": "14 29 46 55 59 16"
+  },
+  {
+    ":id": "row-j8gg.tmw9~hkjd",
+    ":version": "rv-qrf5-rfv8_rjgw",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-08-05T00:00:00.000",
+    "winning_numbers": "14 20 59 60 61 25",
+    "multiplier": "2",
+    "double_play_winning_numbers": "06 33 54 63 66 18"
+  },
+  {
+    ":id": "row-3tm6-582h_5rvu",
+    ":version": "rv-s5zb-ywcw.wvif",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-08-03T00:00:00.000",
+    "winning_numbers": "08 30 41 48 54 04",
+    "multiplier": "2",
+    "double_play_winning_numbers": "11 15 21 28 33 06"
+  },
+  {
+    ":id": "row-4nax.stcm.whsv",
+    ":version": "rv-tg35-kqnm~sanx",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-08-01T00:00:00.000",
+    "winning_numbers": "06 17 27 48 50 05",
+    "multiplier": "3",
+    "double_play_winning_numbers": "10 32 33 54 64 01"
+  },
+  {
+    ":id": "row-irp3-t3n7.s7ff",
+    ":version": "rv-tb7t_edsu_7cup",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-07-29T00:00:00.000",
+    "winning_numbers": "30 36 40 42 57 02",
+    "multiplier": "2",
+    "double_play_winning_numbers": "24 37 40 51 55 05"
+  },
+  {
+    ":id": "row-ezxc~vdhc.wyq7",
+    ":version": "rv-85rv_j6fi~vesq",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-07-27T00:00:00.000",
+    "winning_numbers": "06 26 46 58 65 25",
+    "multiplier": "2",
+    "double_play_winning_numbers": "17 25 59 61 69 14"
+  },
+  {
+    ":id": "row-fpcy_5rr4_g2i8",
+    ":version": "rv-cwim_fvz5.pa2f",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-07-25T00:00:00.000",
+    "winning_numbers": "03 04 24 36 47 17",
+    "multiplier": "4",
+    "double_play_winning_numbers": "20 21 26 28 32 10"
+  },
+  {
+    ":id": "row-a9dj-vxdh~iiwb",
+    ":version": "rv-vai6-5cj5-bibs",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-07-22T00:00:00.000",
+    "winning_numbers": "04 05 22 50 58 01",
+    "multiplier": "3",
+    "double_play_winning_numbers": "09 51 54 60 61 15"
+  },
+  {
+    ":id": "row-v9fs.staq~rhv3",
+    ":version": "rv-g68q-bxi7~7dhw",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-07-20T00:00:00.000",
+    "winning_numbers": "02 09 44 53 59 08",
+    "multiplier": "2",
+    "double_play_winning_numbers": "15 21 39 54 67 07"
+  },
+  {
+    ":id": "row-4y9z-h9rp-dmvm",
+    ":version": "rv-n6gi-4j5u_c3q2",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-07-18T00:00:00.000",
+    "winning_numbers": "09 14 44 50 56 03",
+    "multiplier": "4",
+    "double_play_winning_numbers": "05 11 25 26 64 11"
+  },
+  {
+    ":id": "row-mh2k-x2wc.ijqj",
+    ":version": "rv-hqyn-jrmb.r756",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-07-15T00:00:00.000",
+    "winning_numbers": "02 07 18 29 38 16",
+    "multiplier": "2",
+    "double_play_winning_numbers": "14 15 23 33 42 16"
+  },
+  {
+    ":id": "row-vxm2_gvka.hden",
+    ":version": "rv-842u.7pk8-3gve",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-07-13T00:00:00.000",
+    "winning_numbers": "05 25 36 40 48 03",
+    "multiplier": "2",
+    "double_play_winning_numbers": "01 17 31 39 43 22"
+  },
+  {
+    ":id": "row-p3ky~exs7.dt73",
+    ":version": "rv-x64y.xm7x-p4r4",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-07-11T00:00:00.000",
+    "winning_numbers": "08 10 14 45 59 05",
+    "multiplier": "2",
+    "double_play_winning_numbers": "05 07 17 26 28 05"
+  },
+  {
+    ":id": "row-kexc_x4rw~thsv",
+    ":version": "rv-5d6g-j4fj-b7ze",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-07-08T00:00:00.000",
+    "winning_numbers": "12 29 37 43 55 18",
+    "multiplier": "4",
+    "double_play_winning_numbers": "06 27 33 44 69 23"
+  },
+  {
+    ":id": "row-9nnj~nvd8~5atn",
+    ":version": "rv-v33c-mnfv_2fam",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-07-06T00:00:00.000",
+    "winning_numbers": "17 44 63 66 67 04",
+    "multiplier": "2",
+    "double_play_winning_numbers": "22 25 27 47 50 21"
+  },
+  {
+    ":id": "row-txkr_jqeg-mye8",
+    ":version": "rv-wrev~vqw8~dt5r",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-07-04T00:00:00.000",
+    "winning_numbers": "17 38 46 50 69 20",
+    "multiplier": "2",
+    "double_play_winning_numbers": "04 19 24 25 41 09"
+  },
+  {
+    ":id": "row-5eav_42uy_j7pb",
+    ":version": "rv-t72w_bbf4-35wm",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-07-01T00:00:00.000",
+    "winning_numbers": "02 06 26 39 68 06",
+    "multiplier": "2",
+    "double_play_winning_numbers": "10 20 30 60 64 07"
+  },
+  {
+    ":id": "row-zheh-2pdr_ic7d",
+    ":version": "rv-xywn-pngy_tx5u",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-06-29T00:00:00.000",
+    "winning_numbers": "10 14 41 53 59 03",
+    "multiplier": "2",
+    "double_play_winning_numbers": "02 09 24 25 39 14"
+  },
+  {
+    ":id": "row-x5k7-tzsa-zrd7",
+    ":version": "rv-3vw7.j8d7.2yig",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-06-27T00:00:00.000",
+    "winning_numbers": "03 16 28 30 59 11",
+    "multiplier": "2",
+    "double_play_winning_numbers": "02 26 34 43 45 15"
+  },
+  {
+    ":id": "row-htb3-v4ae-e44r",
+    ":version": "rv-fe9f_3unm.xbji",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-06-24T00:00:00.000",
+    "winning_numbers": "13 14 16 21 38 14",
+    "multiplier": "2",
+    "double_play_winning_numbers": "03 11 20 31 65 05"
+  },
+  {
+    ":id": "row-t3hs-r9sn-wdrz",
+    ":version": "rv-e5pt-g5cx_vsg3",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-06-22T00:00:00.000",
+    "winning_numbers": "17 19 21 45 48 13",
+    "multiplier": "2",
+    "double_play_winning_numbers": "18 41 43 64 65 25"
+  },
+  {
+    ":id": "row-xrrw_vca4_xw7f",
+    ":version": "rv-ry84-49j3~5bzr",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-06-20T00:00:00.000",
+    "winning_numbers": "16 20 44 48 50 15",
+    "multiplier": "2",
+    "double_play_winning_numbers": "11 12 25 42 57 20"
+  },
+  {
+    ":id": "row-z3xf.35kr.3daa",
+    ":version": "rv-wvdu~fsgc-xpv4",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-06-17T00:00:00.000",
+    "winning_numbers": "03 26 49 53 61 12",
+    "multiplier": "2",
+    "double_play_winning_numbers": "10 17 44 63 67 24"
+  },
+  {
+    ":id": "row-9yzp~uanv-w4h5",
+    ":version": "rv-gehp.94hq-v84d",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-06-15T00:00:00.000",
+    "winning_numbers": "25 55 57 60 62 23",
+    "multiplier": "2",
+    "double_play_winning_numbers": "22 23 28 32 68 21"
+  },
+  {
+    ":id": "row-6a5r-y85z-svzd",
+    ":version": "rv-cvks_6ra9~hyaq",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-06-13T00:00:00.000",
+    "winning_numbers": "03 13 44 50 53 02",
+    "multiplier": "4",
+    "double_play_winning_numbers": "24 55 56 57 67 15"
+  },
+  {
+    ":id": "row-psvx_qvu4~i9sc",
+    ":version": "rv-xdsz-vpgf-swxt",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-06-10T00:00:00.000",
+    "winning_numbers": "12 31 38 60 66 14",
+    "multiplier": "2",
+    "double_play_winning_numbers": "08 35 41 42 67 11"
+  },
+  {
+    ":id": "row-ica5_6fvp_p52c",
+    ":version": "rv-jpab_msxd_zgmu",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-06-08T00:00:00.000",
+    "winning_numbers": "03 24 34 43 49 20",
+    "multiplier": "3",
+    "double_play_winning_numbers": "01 16 20 21 49 10"
+  },
+  {
+    ":id": "row-khsg~98fw~8hgu",
+    ":version": "rv-i4xf.b24d_7n5x",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-06-06T00:00:00.000",
+    "winning_numbers": "16 32 55 59 64 03",
+    "multiplier": "3",
+    "double_play_winning_numbers": "03 18 26 52 54 08"
+  },
+  {
+    ":id": "row-kzr5_gzeq-9r6p",
+    ":version": "rv-y73r~mmxc.s6a7",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-06-03T00:00:00.000",
+    "winning_numbers": "14 16 38 55 64 12",
+    "multiplier": "3",
+    "double_play_winning_numbers": "26 28 31 56 64 13"
+  },
+  {
+    ":id": "row-uumn.f89r-n3uz",
+    ":version": "rv-zfj3~zsdn_imnc",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-06-01T00:00:00.000",
+    "winning_numbers": "02 42 47 57 58 14",
+    "multiplier": "3"
+  },
+  {
+    ":id": "row-ikj4-gttt~ckiu",
+    ":version": "rv-vnem~hgce~tuke",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-05-30T00:00:00.000",
+    "winning_numbers": "01 27 35 44 52 12",
+    "multiplier": "2"
+  },
+  {
+    ":id": "row-iex4.zfbg.xcrp",
+    ":version": "rv-mz5v_rdje~vxjs",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-05-27T00:00:00.000",
+    "winning_numbers": "05 14 21 31 51 13",
+    "multiplier": "4"
+  },
+  {
+    ":id": "row-qrye_gf8w-f9iv",
+    ":version": "rv-tsrh-ppig-ggfa",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-05-25T00:00:00.000",
+    "winning_numbers": "17 32 48 60 64 10",
+    "multiplier": "2"
+  },
+  {
+    ":id": "row-adka-h9uc-37ai",
+    ":version": "rv-xipf_prep.8bpi",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-05-23T00:00:00.000",
+    "winning_numbers": "04 16 41 48 66 26",
+    "multiplier": "2"
+  },
+  {
+    ":id": "row-m5bf-t74w_m9zf",
+    ":version": "rv-5jsn.fmmi_ikuc",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-05-20T00:00:00.000",
+    "winning_numbers": "10 28 30 46 57 25",
+    "multiplier": "3"
+  },
+  {
+    ":id": "row-37fm-f6ey.nw8y",
+    ":version": "rv-nn9f.93fw-zp4i",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-05-18T00:00:00.000",
+    "winning_numbers": "04 13 34 61 65 12",
+    "multiplier": "2"
+  },
+  {
+    ":id": "row-mzne_f2t6-pggh",
+    ":version": "rv-uvti_rj4b.745p",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-05-16T00:00:00.000",
+    "winning_numbers": "08 37 40 44 65 18",
+    "multiplier": "3"
+  },
+  {
+    ":id": "row-97uy_ep8m-v4b9",
+    ":version": "rv-vyfm_c7gj_bnwp",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-05-13T00:00:00.000",
+    "winning_numbers": "22 31 52 56 67 15",
+    "multiplier": "2"
+  },
+  {
+    ":id": "row-afpc~3be5~brf2",
+    ":version": "rv-a6sr_mjkt~q2qv",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-05-11T00:00:00.000",
+    "winning_numbers": "24 30 37 56 64 07",
+    "multiplier": "3"
+  },
+  {
+    ":id": "row-qxr5~gzbk~6998",
+    ":version": "rv-gby6~szd9-8pej",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-05-09T00:00:00.000",
+    "winning_numbers": "15 41 46 47 56 22",
+    "multiplier": "2"
+  },
+  {
+    ":id": "row-gdx9.6i4e.ft5p",
+    ":version": "rv-43kd~r65y_y7w3",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-05-06T00:00:00.000",
+    "winning_numbers": "18 27 51 65 68 05",
+    "multiplier": "3"
+  },
+  {
+    ":id": "row-7xch-66x4-jucs",
+    ":version": "rv-7c3v_vsh2_bx7t",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-05-04T00:00:00.000",
+    "winning_numbers": "30 36 42 60 63 13",
+    "multiplier": "2"
+  },
+  {
+    ":id": "row-th3h~it9m_8ysa",
+    ":version": "rv-zh98.jbem~um6k",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-05-02T00:00:00.000",
+    "winning_numbers": "25 37 42 52 65 14",
+    "multiplier": "3"
+  },
+  {
+    ":id": "row-zdfx_8456_nhw6",
+    ":version": "rv-b336.54zx.p7ev",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-04-29T00:00:00.000",
+    "winning_numbers": "03 19 35 51 67 15",
+    "multiplier": "2"
+  },
+  {
+    ":id": "row-xa2v~eekk.2mwa",
+    ":version": "rv-st8k.9nmn.58q6",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-04-27T00:00:00.000",
+    "winning_numbers": "18 31 33 36 62 03",
+    "multiplier": "3"
+  },
+  {
+    ":id": "row-m3ys.y96f_8xvv",
+    ":version": "rv-xuvh_xsb9_cdri",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-04-25T00:00:00.000",
+    "winning_numbers": "04 30 36 52 57 02",
+    "multiplier": "3"
+  },
+  {
+    ":id": "row-7u25_9ktc_gdds",
+    ":version": "rv-8a8x.gsh4~nwit",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-04-22T00:00:00.000",
+    "winning_numbers": "24 29 32 49 63 11",
+    "multiplier": "2"
+  },
+  {
+    ":id": "row-bnub~2yjb_h96f",
+    ":version": "rv-mqff.2u9f~63ve",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-04-20T00:00:00.000",
+    "winning_numbers": "09 17 36 47 64 26",
+    "multiplier": "3"
+  },
+  {
+    ":id": "row-vw4t-zuqj-p2uz",
+    ":version": "rv-ayw7_rfcc_r462",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-04-18T00:00:00.000",
+    "winning_numbers": "24 25 39 46 61 01",
+    "multiplier": "5"
+  },
+  {
+    ":id": "row-e7ct-wvvf.9eb9",
+    ":version": "rv-dgzb~u5ax.swvr",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-04-15T00:00:00.000",
+    "winning_numbers": "13 21 27 43 45 26",
+    "multiplier": "5"
+  },
+  {
+    ":id": "row-egbt.b79k_3265",
+    ":version": "rv-qfug-a64i.3wv5",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-04-13T00:00:00.000",
+    "winning_numbers": "38 43 59 63 64 15",
+    "multiplier": "3"
+  },
+  {
+    ":id": "row-qxkq.3wy4~v3xd",
+    ":version": "rv-anwg-gkjk-cfym",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-04-11T00:00:00.000",
+    "winning_numbers": "06 47 49 53 60 06",
+    "multiplier": "2"
+  },
+  {
+    ":id": "row-h9i9~sw8i-dch2",
+    ":version": "rv-9nww.5pqt-2fjt",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-04-08T00:00:00.000",
+    "winning_numbers": "03 16 17 42 52 03",
+    "multiplier": "2"
+  },
+  {
+    ":id": "row-xipw~icui_kwwv",
+    ":version": "rv-x5ca.if8d~2hab",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-04-06T00:00:00.000",
+    "winning_numbers": "07 24 37 42 57 05",
+    "multiplier": "2"
+  },
+  {
+    ":id": "row-6pyf-k7hh_jvca",
+    ":version": "rv-td38_557u_zrtk",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-04-04T00:00:00.000",
+    "winning_numbers": "03 06 13 41 65 01",
+    "multiplier": "4"
+  },
+  {
+    ":id": "row-tc5v_i5vx~dpyq",
+    ":version": "rv-ugen.r6uu~5kkz",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-04-01T00:00:00.000",
+    "winning_numbers": "04 10 11 52 64 24",
+    "multiplier": "3"
+  },
+  {
+    ":id": "row-6p3t~9rgn.kcbf",
+    ":version": "rv-bkzc_qe7n-6gbb",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-03-30T00:00:00.000",
+    "winning_numbers": "07 11 31 41 57 20",
+    "multiplier": "2"
+  },
+  {
+    ":id": "row-ptt9~hzmt.aftw",
+    ":version": "rv-icr2_w2s4-x24e",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-03-28T00:00:00.000",
+    "winning_numbers": "11 42 43 59 61 25",
+    "multiplier": "4"
+  },
+  {
+    ":id": "row-smww.wh6a.6vum",
+    ":version": "rv-usg3.phyu~y84z",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-03-25T00:00:00.000",
+    "winning_numbers": "07 21 55 56 64 26",
+    "multiplier": "4"
+  },
+  {
+    ":id": "row-yrbb~kyse-qucc",
+    ":version": "rv-vzyq-e2h6-avzs",
+    ":created_at": "2026-09-30T17:22:21.656Z",
+    ":updated_at": "2026-09-30T17:22:21.656Z",
+    "draw_date": "2026-03-23T00:00:00.000",
+    "winning_numbers": "12 18 47 56 63 01",
+    "multiplier": "10"
+  }
+]

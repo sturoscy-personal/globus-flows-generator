@@ -1,0 +1,243 @@
+{
+  "Comment": "Transfer a dataset, extract metadata with Globus Compute, ingest it into Globus Search, then email the runner. Destination data is deleted if the transfer, compute or ingest step fails.",
+  "StartAt": "Transfer",
+  "States": {
+    "Transfer": {
+      "Type": "Action",
+      "ActionUrl": "https://transfer.actions.globus.org/transfer",
+      "Parameters": {
+        "source_endpoint.$": "$.source.id",
+        "destination_endpoint.$": "$.destination.id",
+        "DATA": [
+          {
+            "source_path.$": "$.source.path",
+            "destination_path.$": "$.destination.path"
+          }
+        ]
+      },
+      "ResultPath": "$.TransferResult",
+      "WaitTime": 86400,
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "ActionFailedException",
+            "ActionUnableToRun",
+            "ActionTimeout"
+          ],
+          "ResultPath": "$.Error",
+          "Next": "CleanupAfterTransfer"
+        }
+      ],
+      "Next": "ExtractMetadata"
+    },
+    "ExtractMetadata": {
+      "Type": "Action",
+      "Comment": "Run the registered function on the transferred file. It ingests one Search entry per draw and returns a dataset summary.",
+      "ActionUrl": "https://compute.actions.globus.org/v3",
+      "Parameters": {
+        "endpoint_id.$": "$.compute.endpoint_id",
+        "tasks": [
+          {
+            "function_id.$": "$.compute.function_id",
+            "kwargs": {
+              "path.$": "$.compute.file_path",
+              "search_index.$": "$.search_index",
+              "visible_to.$": "$.visible_to"
+            }
+          }
+        ]
+      },
+      "ResultPath": "$.ComputeResult",
+      "WaitTime": 1800,
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "ActionFailedException",
+            "ActionUnableToRun",
+            "ActionTimeout"
+          ],
+          "ResultPath": "$.Error",
+          "Next": "CleanupAfterCompute"
+        }
+      ],
+      "Next": "Ingest"
+    },
+    "Ingest": {
+      "Type": "Action",
+      "ActionUrl": "https://actions.globus.org/search/ingest",
+      "Parameters": {
+        "search_index.$": "$.search_index",
+        "subject.$": "$.subject",
+        "visible_to.$": "$.visible_to",
+        "content.$": "$.ComputeResult.details.result[0]"
+      },
+      "ResultPath": "$.IngestResult",
+      "WaitTime": 900,
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "ActionFailedException",
+            "ActionUnableToRun",
+            "ActionTimeout"
+          ],
+          "ResultPath": "$.Error",
+          "Next": "CleanupAfterIngest"
+        }
+      ],
+      "Next": "NotifySuccess"
+    },
+    "NotifySuccess": {
+      "Type": "Action",
+      "ActionUrl": "https://actions.globus.org/notification/notify",
+      "Parameters": {
+        "sender.$": "$.notify.sender",
+        "destination.$": "$._context.email",
+        "subject": "Globus flow completed: data transferred and indexed",
+        "body_template": "Run ${run_id} finished. Data was copied to ${destination_path} and indexed under subject ${subject}.",
+        "body_variables": {
+          "run_id.$": "$._context.run_id",
+          "destination_path.$": "$.destination.path",
+          "subject.$": "$.subject"
+        },
+        "body_mimetype": "text/plain",
+        "__Private_Parameters": [
+          "send_credentials"
+        ],
+        "send_credentials": [
+          {
+            "credential_type": "smtp",
+            "credential_value": {
+              "hostname.$": "$.notify.smtp.hostname",
+              "username.$": "$.notify.smtp.username",
+              "password.$": "$.notify.smtp.password",
+              "port.$": "$.notify.smtp.port"
+            }
+          }
+        ]
+      },
+      "ResultPath": "$.NotifyResult",
+      "WaitTime": 300,
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "ActionFailedException",
+            "ActionUnableToRun",
+            "ActionTimeout"
+          ],
+          "ResultPath": "$.Error",
+          "Next": "NotifyFailed"
+        }
+      ],
+      "End": true
+    },
+    "CleanupAfterTransfer": {
+      "Type": "Action",
+      "Comment": "Remove any partially transferred data from the destination.",
+      "ActionUrl": "https://transfer.actions.globus.org/delete",
+      "Parameters": {
+        "endpoint.$": "$.destination.id",
+        "recursive": true,
+        "DATA": [
+          {
+            "path.$": "$.destination.path"
+          }
+        ]
+      },
+      "ResultPath": "$.CleanupResult",
+      "WaitTime": 3600,
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "ActionFailedException",
+            "ActionUnableToRun",
+            "ActionTimeout"
+          ],
+          "ResultPath": "$.CleanupError",
+          "Next": "CleanupFailed"
+        }
+      ],
+      "Next": "TransferFailed"
+    },
+    "CleanupAfterCompute": {
+      "Type": "Action",
+      "Comment": "Metadata extraction failed, so remove the transferred data.",
+      "ActionUrl": "https://transfer.actions.globus.org/delete",
+      "Parameters": {
+        "endpoint.$": "$.destination.id",
+        "recursive": true,
+        "DATA": [
+          {
+            "path.$": "$.destination.path"
+          }
+        ]
+      },
+      "ResultPath": "$.CleanupResult",
+      "WaitTime": 3600,
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "ActionFailedException",
+            "ActionUnableToRun",
+            "ActionTimeout"
+          ],
+          "ResultPath": "$.CleanupError",
+          "Next": "CleanupFailed"
+        }
+      ],
+      "Next": "ComputeFailed"
+    },
+    "CleanupAfterIngest": {
+      "Type": "Action",
+      "Comment": "Ingest failed, so remove the transferred data to avoid an unindexed copy.",
+      "ActionUrl": "https://transfer.actions.globus.org/delete",
+      "Parameters": {
+        "endpoint.$": "$.destination.id",
+        "recursive": true,
+        "DATA": [
+          {
+            "path.$": "$.destination.path"
+          }
+        ]
+      },
+      "ResultPath": "$.CleanupResult",
+      "WaitTime": 3600,
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "ActionFailedException",
+            "ActionUnableToRun",
+            "ActionTimeout"
+          ],
+          "ResultPath": "$.CleanupError",
+          "Next": "CleanupFailed"
+        }
+      ],
+      "Next": "IngestFailed"
+    },
+    "TransferFailed": {
+      "Type": "Fail",
+      "Error": "TransferFailed",
+      "Cause": "The transfer did not complete; destination data was cleaned up. See $.Error in the run output."
+    },
+    "ComputeFailed": {
+      "Type": "Fail",
+      "Error": "ComputeFailed",
+      "Cause": "Metadata extraction failed; transferred data was cleaned up. See $.Error in the run output."
+    },
+    "IngestFailed": {
+      "Type": "Fail",
+      "Error": "IngestFailed",
+      "Cause": "Search ingest failed; transferred data was cleaned up. See $.Error in the run output."
+    },
+    "NotifyFailed": {
+      "Type": "Fail",
+      "Error": "NotifyFailed",
+      "Cause": "Data was transferred and indexed, but the notification email failed. No cleanup was performed. See $.Error."
+    },
+    "CleanupFailed": {
+      "Type": "Fail",
+      "Error": "CleanupFailed",
+      "Cause": "A step failed and cleanup of the destination also failed. Manually check the destination path. See $.Error and $.CleanupError."
+    }
+  }
+}

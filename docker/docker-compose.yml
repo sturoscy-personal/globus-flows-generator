@@ -1,0 +1,28 @@
+services:
+  compute-endpoint:
+    build: .
+    container_name: compute-endpoint
+    environment:
+      ENDPOINT_NAME: powerball-local
+      # For headless login, register a Globus client and put its credentials
+      # in a .env file next to this file (do not commit it).
+      GLOBUS_COMPUTE_CLIENT_ID: ${GLOBUS_COMPUTE_CLIENT_ID:-}
+      GLOBUS_COMPUTE_CLIENT_SECRET: ${GLOBUS_COMPUTE_CLIENT_SECRET:-}
+      # Used by the ingest function to write to Globus Search. This client
+      # needs the writer role on the target index. Set both in .env.
+      GLOBUS_SEARCH_CLIENT_ID: ${GLOBUS_SEARCH_CLIENT_ID:-}
+      GLOBUS_SEARCH_CLIENT_SECRET: ${GLOBUS_SEARCH_CLIENT_SECRET:-}
+    volumes:
+      # Keeps the endpoint UUID and config across restarts.
+      - compute-config:/home/compute/.globus_compute
+      # Host folder that your Globus Connect Personal collection shares.
+      # The flow's compute.file_path is the path inside the container (/data/...).
+      - ${DATA_DIR}:/data
+      # Lets you register the function from inside the container.
+      - ../scripts:/scripts:ro
+    # Proper signal handling and shutdown for the endpoint process.
+    init: true
+    restart: unless-stopped
+
+volumes:
+  compute-config:

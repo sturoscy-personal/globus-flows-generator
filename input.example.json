@@ -1,0 +1,29 @@
+{
+  "source": {
+    "id": "<collection-uuid>",
+    "path": "/Users/<you>/globus-source/powerball_sample.json"
+  },
+  "destination": {
+    "id": "<collection-uuid>",
+    "path": "/Users/<you>/globus-destination/powerball_sample.json"
+  },
+  "search_index": "<search-index-uuid>",
+  "subject": "powerball-sample",
+  "visible_to": [
+    "public"
+  ],
+  "compute": {
+    "endpoint_id": "<compute-endpoint-uuid>",
+    "function_id": "<function-uuid>",
+    "file_path": "/data/powerball_sample.json"
+  },
+  "notify": {
+    "sender": "sender@example.org",
+    "smtp": {
+      "hostname": "smtp.example.org",
+      "username": "smtp-user",
+      "password": "smtp-password",
+      "port": 587
+    }
+  }
+}

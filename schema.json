@@ -1,0 +1,154 @@
+{
+  "type": "object",
+  "required": [
+    "source",
+    "destination",
+    "search_index",
+    "subject",
+    "compute",
+    "notify"
+  ],
+  "properties": {
+    "source": {
+      "type": "object",
+      "format": "globus-collection",
+      "title": "Source collection and path",
+      "description": "Where the data currently lives. For a single file, give the file path. Keep this outside the folder the Compute endpoint can see.",
+      "required": [
+        "id",
+        "path"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "destination": {
+      "type": "object",
+      "format": "globus-collection",
+      "title": "Destination collection and path",
+      "description": "Full destination path of the file (for example /Users/me/globus-destination/data.json). The folder must be the one the Compute endpoint mounts. On failure this path is deleted recursively, so never use the source path or a folder with existing data.",
+      "required": [
+        "id",
+        "path"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "search_index": {
+      "type": "string",
+      "format": "uuid",
+      "title": "Search index",
+      "description": "UUID of the Globus Search index to ingest into."
+    },
+    "subject": {
+      "type": "string",
+      "title": "Search subject",
+      "description": "Unique Search subject, for example powerball-2026-11."
+    },
+    "visible_to": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "public"
+      ],
+      "title": "Visible to",
+      "description": "Principal URNs allowed to see the entry, or 'public'."
+    },
+    "notify": {
+      "type": "object",
+      "title": "Email settings",
+      "description": "Sender and SMTP server for the completion email, which is sent to the person running the flow.",
+      "required": [
+        "sender",
+        "smtp"
+      ],
+      "properties": {
+        "sender": {
+          "type": "string",
+          "format": "email",
+          "title": "Sender address"
+        },
+        "smtp": {
+          "type": "object",
+          "title": "SMTP settings",
+          "required": [
+            "hostname",
+            "username",
+            "password",
+            "port"
+          ],
+          "properties": {
+            "hostname": {
+              "type": "string",
+              "title": "SMTP host",
+              "description": "For example smtp.example.edu."
+            },
+            "username": {
+              "type": "string",
+              "title": "SMTP username"
+            },
+            "password": {
+              "type": "string",
+              "title": "SMTP password",
+              "writeOnly": true
+            },
+            "port": {
+              "type": "integer",
+              "title": "SMTP port",
+              "description": "For example 587.",
+              "default": 587
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "compute": {
+      "type": "object",
+      "title": "Metadata extraction (Globus Compute)",
+      "description": "Endpoint and function that build the Search metadata from the transferred file.",
+      "required": [
+        "endpoint_id",
+        "function_id",
+        "file_path"
+      ],
+      "properties": {
+        "endpoint_id": {
+          "type": "string",
+          "format": "uuid",
+          "title": "Compute endpoint ID"
+        },
+        "function_id": {
+          "type": "string",
+          "format": "uuid",
+          "title": "Function ID"
+        },
+        "file_path": {
+          "type": "string",
+          "title": "File path on the endpoint",
+          "description": "Filesystem path, as the Compute endpoint sees it, of the transferred file. It must match the destination path."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

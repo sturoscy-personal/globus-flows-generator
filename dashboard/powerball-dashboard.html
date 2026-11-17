@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Powerball draws dashboard</title>
+<style>
+  :root { color-scheme: light; --bg:#f6f7f9; --card:#fff; --ink:#1c2430; --muted:#6b7686; --line:#e3e7ee; --blue:#3b6fd4; --orange:#e08a2c; --red:#c8453c; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:20px; background:var(--bg); color:var(--ink); font:14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  h1 { font-size:20px; margin:0 0 2px; }
+  .sub { color:var(--muted); font-size:12px; margin-bottom:16px; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-bottom:14px; }
+  .kpi, .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+  .kpi .v { font-size:22px; font-weight:600; }
+  .kpi .l { color:var(--muted); font-size:12px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(420px,1fr)); gap:14px; margin-bottom:14px; }
+  .card h2 { font-size:14px; margin:0 0 2px; }
+  .card .note { color:var(--muted); font-size:12px; margin-bottom:8px; }
+  .chart { position:relative; height:260px; }
+  .toggle { display:inline-flex; border:1px solid var(--line); border-radius:6px; overflow:hidden; margin:4px 0 8px; }
+  .toggle button { border:0; background:#fff; padding:4px 10px; font-size:12px; cursor:pointer; color:var(--ink); }
+  .toggle button.on { background:var(--blue); color:#fff; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th, td { text-align:left; padding:5px 8px; border-bottom:1px solid var(--line); }
+  th { color:var(--muted); font-weight:600; font-size:12px; }
+  td.num { font-variant-numeric:tabular-nums; }
+  .pb { display:inline-block; min-width:22px; text-align:center; padding:0 5px; border-radius:11px; background:var(--red); color:#fff; font-weight:600; margin-left:4px; }
+  .err { background:#fdecea; border:1px solid #f3b9b3; color:#8a2a22; padding:10px 14px; border-radius:8px; margin-bottom:14px; display:none; }
+  .foot { color:var(--muted); font-size:12px; margin-top:6px; }
+  .loading { color:var(--muted); }
+</style>
+</head>
+<body>
+<h1>Powerball draws</h1>
+<div class="sub">Queried live from your browser against the Globus Search index <code>powerball-test</code> (01fb6c5a-bace-48ca-9f03-c9eb166a6a3e), using the Globus JavaScript SDK. One entry per draw; every number below comes from queries to the index. Anonymous queries see only public entries.</div>
+<div id="err" class="err"></div>
+
+<div class="kpis">
+  <div class="kpi"><div class="v" id="k-total">…</div><div class="l">draws indexed</div></div>
+  <div class="kpi"><div class="v" id="k-range">…</div><div class="l">date range</div></div>
+  <div class="kpi"><div class="v" id="k-latest">…</div><div class="l">latest draw</div></div>
+  <div class="kpi"><div class="v" id="k-10x">…</div><div class="l">draws with 10x multiplier</div></div>
+</div>
+
+<div class="grid">
+  <div class="card" style="grid-column:1/-1">
+    <h2>White ball frequency</h2>
+    <div class="note">Balls 1–59 were eligible in every draw; 60–69 only since the pool change on 2015-10-07. Use the per-eligible-draw view to compare them fairly.</div>
+    <div class="toggle"><button id="b-raw" class="on">Raw count</button><button id="b-rate">Per eligible draw</button></div>
+    <div class="chart"><canvas id="c-white"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>Powerball number frequency</h2>
+    <div class="note">Counts mix pool eras (the range shrank over time), so larger numbers are only from older draws.</div>
+    <div class="chart"><canvas id="c-pb"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>Multiplier</h2>
+    <div class="note" id="mult-note">Draws that have a multiplier.</div>
+    <div class="chart"><canvas id="c-mult"></canvas></div>
+  </div>
+  <div class="card" style="grid-column:1/-1">
+    <h2>Draws per year</h2>
+    <div class="note">The 2010 and 2026 bars are partial years.</div>
+    <div class="chart"><canvas id="c-year"></canvas></div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h2>Latest draws</h2>
+    <table id="t-latest"><thead><tr><th>Date</th><th>Numbers</th><th>Mult.</th></tr></thead><tbody><tr><td class="loading" colspan="3">Loading…</td></tr></tbody></table>
+  </div>
+  <div class="card">
+    <h2>10x multiplier draws</h2>
+    <table id="t-10x"><thead><tr><th>Date</th><th>Numbers</th></tr></thead><tbody><tr><td class="loading" colspan="2">Loading…</td></tr></tbody></table>
+  </div>
+</div>
+<div class="foot">Queried with Globus Search advanced search (facets on <code>white_balls</code>, <code>powerball</code>, <code>multiplier</code> and a year histogram on <code>draw_date</code>). Summary entries are excluded by requiring a <code>draw_date</code>.</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@globus/sdk/dist/umd/globus.production.js"></script>
+<script>
+(async () => {
+  const IDX = "01fb6c5a-bace-48ca-9f03-c9eb166a6a3e";
+    const ERA_START = "2015-10-07";
+  const HAS_DRAW = { type: "exists", field_name: "draw_date" };
+
+  // Uses the Globus JavaScript SDK (UMD global `globus`). If the SDK script did not load,
+  // falls back to the same POST /v1/index/{id}/search request with plain fetch.
+  async function search(params) {
+    let res;
+    if (window.globus && globus.search && globus.search.query && globus.search.query.post) {
+      res = await globus.search.query.post(IDX, { payload: params });
+    } else {
+      res = await fetch(`https://search.api.globus.org/v1/index/${IDX}/search`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(params)
+      });
+    }
+    if (!res.ok) throw new Error(`Search returned HTTP ${res.status} ${res.statusText}`);
+    const body = await res.json();
+    // Some response formats name the facet list `facet_results`.
+    if (body.facet_results && !body.facets) body.facets = body.facet_results;
+    return body;
+  }
+  const rows = (res) => res.gmeta.map(g => g.entries[0].content);
+  const buckets = (res, name) => res.facets.find(f => f.name === name).buckets;
+
+  try {
+    const [facetRes, latestRes, earliestRes, tenRes, eraRes] = await Promise.all([
+      search({ q: "*", filters: [HAS_DRAW], limit: 1, facets: [
+        { name: "white_balls", type: "terms", field_name: "white_balls", size: 69 },
+        { name: "powerball", type: "terms", field_name: "powerball", size: 40 },
+        { name: "multiplier", type: "terms", field_name: "multiplier", size: 10 },
+        { name: "per_year", type: "date_histogram", field_name: "draw_date", date_interval: "year" }
+      ]}),
+      search({ q: "*", filters: [HAS_DRAW], sort: [{ field_name: "draw_date", order: "desc" }], limit: 10 }),
+      search({ q: "*", filters: [HAS_DRAW], sort: [{ field_name: "draw_date", order: "asc" }], limit: 1 }),
+      search({ q: "*", filters: [HAS_DRAW, { type: "match_all", field_name: "multiplier", values: ["10"] }],
+               sort: [{ field_name: "draw_date", order: "desc" }], limit: 50 }),
+      search({ q: "*", filters: [{ type: "range", field_name: "draw_date", values: [{ from: ERA_START, to: "*" }] }], limit: 1 })
+    ]);
+
+    const total = facetRes.total;
+    const newEra = eraRes.total;
+    const latest = rows(latestRes);
+    const earliest = rows(earliestRes)[0];
+    const tens = rows(tenRes);
+
+    document.getElementById("k-total").textContent = total.toLocaleString();
+    document.getElementById("k-range").textContent = earliest.draw_date.slice(0, 4) + "–" + latest[0].draw_date.slice(0, 4);
+    document.getElementById("k-latest").textContent = latest[0].draw_date;
+    document.getElementById("k-10x").textContent = tenRes.total;
+
+    // Tables
+    const pb = (n) => `<span class="pb">${String(n).padStart(2, "0")}</span>`;
+    const numbers = (r) => (r.white_balls || []).map(n => String(n).padStart(2, "0")).join(" ") + pb(r.powerball);
+    document.querySelector("#t-latest tbody").innerHTML = latest.map(r =>
+      `<tr><td class="num">${r.draw_date}</td><td class="num">${numbers(r)}</td><td>${r.multiplier ? r.multiplier + "x" : "–"}</td></tr>`).join("");
+    document.querySelector("#t-10x tbody").innerHTML = tens.map(r =>
+      `<tr><td class="num">${r.draw_date}</td><td class="num">${numbers(r)}</td></tr>`).join("");
+
+    // White balls
+    const wb = Object.fromEntries(buckets(facetRes, "white_balls").map(b => [b.value, b.count]));
+    const labels = Array.from({ length: 69 }, (_, i) => i + 1);
+    const counts = labels.map(n => wb[n] || 0);
+    const eligible = (n) => (n <= 59 ? total : newEra);
+    const rates = labels.map((n, i) => +(counts[i] / eligible(n) * 100).toFixed(2));
+    const meanRate = +(rates.reduce((a, b) => a + b, 0) / rates.length).toFixed(2);
+    const colors = labels.map(n => (n <= 59 ? "#3b6fd4" : "#e08a2c"));
+
+    const whiteChart = new Chart(document.getElementById("c-white"), {
+      type: "bar",
+      data: { labels, datasets: [
+        { label: "Count", data: counts, backgroundColor: colors, order: 2 },
+        { type: "line", label: "Mean (rate view)", data: labels.map(() => meanRate), borderColor: "#c8453c", borderDash: [6, 4], pointRadius: 0, borderWidth: 1.5, hidden: true, order: 1 }
+      ]},
+      options: { responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { callbacks: { afterLabel: (c) => c.dataset.type === "line" ? "" : `eligible draws: ${eligible(c.label * 1)}` } } },
+        scales: { y: { beginAtZero: true, title: { display: true, text: "Appearances" } }, x: { title: { display: true, text: "Ball number (orange = added in 2015)" } } } }
+    });
+    const setMode = (rate) => {
+      whiteChart.data.datasets[0].data = rate ? rates : counts;
+      whiteChart.data.datasets[0].label = rate ? "% of eligible draws" : "Count";
+      whiteChart.data.datasets[1].hidden = !rate;
+      whiteChart.options.scales.y.title.text = rate ? "% of eligible draws" : "Appearances";
+      whiteChart.options.scales.y.beginAtZero = !rate;
+      whiteChart.update();
+      document.getElementById("b-raw").classList.toggle("on", !rate);
+      document.getElementById("b-rate").classList.toggle("on", rate);
+    };
+    document.getElementById("b-raw").onclick = () => setMode(false);
+    document.getElementById("b-rate").onclick = () => setMode(true);
+
+    // Powerball number
+    const pbb = Object.fromEntries(buckets(facetRes, "powerball").map(b => [b.value, b.count]));
+    const pbLabels = Object.keys(pbb).map(Number).sort((a, b) => a - b);
+    new Chart(document.getElementById("c-pb"), {
+      type: "bar",
+      data: { labels: pbLabels, datasets: [{ label: "Count", data: pbLabels.map(n => pbb[n]), backgroundColor: "#c8453c" }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true, title: { display: true, text: "Appearances" } }, x: { title: { display: true, text: "Powerball number" } } } }
+    });
+
+    // Multiplier
+    const mb = buckets(facetRes, "multiplier").sort((a, b) => a.value - b.value);
+    const withMult = mb.reduce((s, b) => s + b.count, 0);
+    document.getElementById("mult-note").textContent = `${withMult.toLocaleString()} of ${total.toLocaleString()} draws have a multiplier; ${(total - withMult).toLocaleString()} do not (shown in the index without that field).`;
+    new Chart(document.getElementById("c-mult"), {
+      type: "bar",
+      data: { labels: mb.map(b => b.value + "x"), datasets: [{ label: "Draws", data: mb.map(b => b.count), backgroundColor: ["#3b6fd4", "#5a8be0", "#e08a2c", "#c8453c", "#7a4fb8"] }] },
+      options: { responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { callbacks: { afterLabel: (c) => `${(c.raw / withMult * 100).toFixed(1)}% of draws with a multiplier` } } },
+        scales: { y: { beginAtZero: true, title: { display: true, text: "Draws" } } } }
+    });
+
+    // Draws per year
+    const yb = buckets(facetRes, "per_year");
+    new Chart(document.getElementById("c-year"), {
+      type: "bar",
+      data: { labels: yb.map(b => b.value), datasets: [{ label: "Draws", data: yb.map(b => b.count), backgroundColor: "#3b6fd4" }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true, title: { display: true, text: "Draws" } } } }
+    });
+  } catch (e) {
+    console.error(e);
+    const box = document.getElementById("err");
+    box.style.display = "block";
+    box.textContent = "Could not load data from Globus Search: " + e.message + ". If this is a CORS or network error and you opened the file directly, serve it instead: run `python3 -m http.server 8000` in this folder and open http://localhost:8000/powerball-dashboard.html";
+  }
+})();
+</script>
+</body>
+</html>
